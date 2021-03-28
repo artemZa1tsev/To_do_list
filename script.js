@@ -16,16 +16,23 @@ function Task(description) {
 const createTemplate = (task, index) => {
     return `
         <div class="shadow p-3 mb-5 bg-body rounded">
-            <div class="todo-item ${task.completed ? 'checked' : ''}">
-            <div class="description">${task.description}</div> 
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                        <input onclick="completeTask(${index})" class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" ${task.completed ? 'checked' : ''} aria-label="...">
-                        <button onclick="deleteTask(${index})" class="btn btn-primary" type="button">Delete</button>
-                        </div>
-                    </div>
 
-           </div>
-           
+            <div class="todo-item ${task.completed ? 'checked' : ''}">
+
+                <div class="description">
+                    <input onclick="completeTask(${index})" class="form-check-input" type="checkbox" id="checkboxNoLabel"
+                        value="" ${task.completed ? 'checked' : '' } aria-label="...">
+
+                    ${task.description}
+
+                </div>
+                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                    <button onclick="deleteTask(${index})" class="btn btn-danger" type="button">Delete</button>
+                </div>
+            </div>
+
+        </div>
+                
         `
 }
 
