@@ -1,11 +1,10 @@
 h1 {
-    margin-left: 40%;
+    text-align: center; 
 }
 
 .todo-item.checked {
-    background-color: darkgray;
     border-radius: 5px;
-    opacity: 0.5;
+    opacity: 0.3;
 }
 
 .todo-item.delition {
